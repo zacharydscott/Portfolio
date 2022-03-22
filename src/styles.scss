@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: Good-Times;
+	src: url("assets/good-times-rg.otf") format("opentype");
+}
+@font-face {
+	font-family: Pixel;
+	src: url("assets/Minecraftia-Regular.ttf") format("opentype");
+}
+@font-face {
+	font-family: Horsemen;
+	src: url("assets/Horsemen.otf") format("opentype");
+}
+:root {
+	--neon-purple: #902be3;
+	--neon-magenta: #d900ff;
+	--neon-pink: #ff00c8;
+	--neon-orange: #ff8c00;
+	--neon-blue: #008aff;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+* {
+	margin: 0;
+}
+body {
+	margin: 0;
+	color: #fff;
+	font-size: 20px;
+	background-color: #000;
+}
+.absolute {
+	position: absolute;
+}
+.relative {
+	position: relative;
+}
+.app-content {
+	height: 3000px;
+	width: 100vw;
+}
+
+.scroll-slide {
+	transition: 1.2s ease-out;
+		transform: none;
+	&.off-screen {
+		transform: translateX(-5rem);
+		opacity: 0;
+	}
+}
