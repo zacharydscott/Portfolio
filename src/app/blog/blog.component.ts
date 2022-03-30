@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WindowService } from '../window.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public windowService: WindowService) { }
 
   ngOnInit(): void {
   }

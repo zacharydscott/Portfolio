@@ -1,4 +1,68 @@
-<h1>Zachary Scott's Blog</h1>
-<ul class="blog-list">
-	<li><a routerLink="./flash-focus">Flash Focus: Building a Full Stack CRUD Application</a></li>
+<div class="toolbar"
+	[ngClass]="{
+		'sticky': ((windowService.scroll$ | async) || 0) < 0
+	}"
+	>
+	<ng-container *ngIf="((windowService.screenType$ | async) || -1) > 0; else smallMenu">
+		Zachary Scott
+	</ng-container>
+	<ng-template #smallMenu>
+		Zachary Scott
+	</ng-template>
+</div>
+<ul *ngIf="((windowService.screenType$ | async) || -1) > 1" class="socials">
+  <li>
+    <a
+      target="_blank"
+      href="https://github.com/zacharydscott"
+      aria-label="GitHub link"
+    >
+      <img src="assets/icons/octocat.svg" />
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/zachary-scott-5b6897125/">
+      <img src="assets/icons/linkedin.svg" />
+    </a>
+  </li>
+  <li>
+    <a href="mailto:zachary.douglas.scott@gmail.com">
+      <img src="assets/icons/email.svg" />
+    </a>
+  </li>
+  <li>
+    <a href="">
+      <img src="assets/icons/resume.svg" />
+    </a>
+  </li>
 </ul>
+<router-outlet> </router-outlet>
+<div
+  *ngIf="((windowService.screenType$ | async) || -1) < 2"
+  class="socials-bottom"
+>
+  <span>
+    <a
+      target="_blank"
+      href="https://github.com/zacharydscott"
+      aria-label="GitHub link"
+    >
+      <img src="assets/icons/octocat.svg" />
+    </a>
+  </span>
+  <span>
+    <a href="https://www.linkedin.com/in/zachary-scott-5b6897125/">
+      <img src="assets/icons/linkedin.svg" />
+    </a>
+  </span>
+  <span>
+    <a href="mailto:zachary.douglas.scott@gmail.com">
+      <img src="assets/icons/email.svg" />
+    </a>
+  </span>
+  <span>
+    <a href="">
+      <img src="assets/icons/resume.svg" />
+    </a>
+  </span>
+</div>

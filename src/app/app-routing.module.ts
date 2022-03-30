@@ -6,6 +6,7 @@ import { LandingComponent } from './landing/landing.component';
 const routes: Routes = [
 	{
 		path: '',
+		pathMatch: 'full',
 		component: LandingComponent
 	},
 	{
