@@ -26,9 +26,7 @@
 }
 body {
 	margin: 0;
-	color: #fff;
 	font-size: 20px;
-	background-color: #000;
 }
 .absolute {
 	position: absolute;
@@ -43,9 +41,48 @@ body {
 
 .scroll-slide {
 	transition: 1.2s ease-out;
-		transform: none;
+	transform: none;
 	&.off-screen {
 		transform: translateX(-5rem);
 		opacity: 0;
+	}
+}
+
+.blog-container {
+	margin: auto;
+	max-width: 700px;
+	width: 95%;
+	@media (min-width: 500px) {
+		width: 90%;
+	}
+	color: rgba(41,41,41,1);
+}
+
+.blog-title {
+	text-align: center;
+	font-family: 'Playfair Display', sans-serif;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-weight: 500;
+    font-size: 2.2rem;
+}
+
+.blog-subtitle {
+	text-align: center;
+}
+
+.blog-main-img {
+	width: 100%;
+}
+
+.blog-body {
+	margin-top: 2rem;
+	font-family: 'Merriweather', serif;
+	&::first-letter {
+		color: #0e5d23;
+		line-height: 3.1rem;
+		font-size: 3em;
+		margin-right: .5rem;
+		float: left;
 	}
 }
