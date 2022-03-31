@@ -6,15 +6,18 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './landing/landing.component';
 import { ScrollSlideDirective } from './scroll-slide.directive';
+import { UtilityComponentsModule } from './utility-components/utility-components.module';
+import { HoverStyleDirective } from './hover-style.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    ScrollSlideDirective
+    ScrollSlideDirective,
   ],
   imports: [
     BrowserModule,
+	UtilityComponentsModule,
 	BrowserAnimationsModule,
     AppRoutingModule
   ],

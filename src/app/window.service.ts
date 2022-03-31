@@ -16,7 +16,7 @@ export class WindowService {
 			if (size.width < 650 || size.height < 650) {
 				return size.width > size.height ? -1 :0;
 			}
-			if (size.width < 1024) {
+			if (size.width < 1275) {
 				return 1;
 			}
 				return 2;

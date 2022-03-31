@@ -20,6 +20,7 @@ h1,h2 {
 	// color: var(--neon-blue);
 	user-select: none;
 	color: #ffffff;
+	margin-top: 0;
 	mix-blend-mode: exclusion;
 	text-align: --webkit-center;
 	font-weight: 300;
@@ -63,7 +64,7 @@ article {
 	margin: auto;
 	width: 100%;
 	@media (min-width: 500px) {
-		width: 90%;
+		width: 85%;
 	}
 	max-width: 1024px;
 }
@@ -88,6 +89,7 @@ h3 {
 p {
 	font-family: Roboto, sans-serif;
 	font-size: 1.2rem;
+	line-height: 1.4;
 	@media (min-width: 1200px) {
 		font-size: 1.75rem;
 	}

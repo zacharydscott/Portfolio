@@ -1,0 +1,30 @@
+<ul [ngClass]="{
+	'fixed-left': ((windowService.screenType$ | async) || -1) > 1
+	}" class="contact-points">
+  <li>
+    <a
+      target="_blank"
+      href="https://github.com/zacharydscott"
+      aria-label="GitHub link"
+[hoverStyle]="{'filter': hoverColor}" [ngStyle]="{'filter': baseColor}" 
+    >
+	<img src="assets/icons/octocat.svg" />
+    </a>
+  </li>
+  <li>
+    <a [hoverStyle]="{'filter': hoverColor}" [ngStyle]="{'filter': baseColor}" href="https://www.linkedin.com/in/zachary-scott-5b6897125/">
+      <img src="assets/icons/linkedin.svg" />
+    </a>
+  </li>
+  <li>
+    <a [hoverStyle]="{'filter': hoverColor}" [ngStyle]="{'filter': baseColor}" href="mailto:zachary.douglas.scott@gmail.com">
+      <img src="assets/icons/email.svg" />
+    </a>
+  </li>
+  <li>
+    <a [hoverStyle]="{'filter': hoverColor}" [ngStyle]="{'filter': baseColor}" href="">
+      <img src="assets/icons/resume.svg" />
+    </a>
+  </li>
+</ul>
+
