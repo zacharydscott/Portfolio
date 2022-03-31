@@ -1,3 +1,4 @@
+<div class="blog">
 <div class="toolbar"
 	[ngClass]="{
 		'sticky': ((windowService.scroll$ | async) || 0) < 0
@@ -12,6 +13,7 @@
 </div>
 
 <router-outlet> </router-outlet>
+</div>
 <app-contact-points baseColor="
 	invert(48%) sepia(79%) saturate(0%) hue-rotate(180deg) brightness(3%) contrast(100%)
 	"
