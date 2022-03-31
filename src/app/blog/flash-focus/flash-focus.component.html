@@ -8,36 +8,65 @@
       JavaScript. NodeJS is so ubiquitous that if you do any UI work, you'll
       already have your environment already set up. So, if you're a front end
       developer, there's no reason not to dip your toes into the world server
-      development as well. For this project the stack we'll be using is Angular
-      for the front end, express for the server side, and MongoDb for storage.
-      Of course, you can swap out any of these elements if you're more familiar
-      with something else. You can find all the code for this project can be
-      found <a href="https://github.com/zacharydscott/flasher">here</a>.
+      development as well.
     </p>
     <p>
-      So, why this stack? Angular is always a great choice for a larger app
-      with more than a few pages and needs the option to scale. Of course React
-      would be a great choice to. So would Svelte, Vue, or even SolidJs - go
-      check that one out - would be a great choice. It all comes down to what
-      you're familiar with here. Express is an easy choice for getting into full
-      stack development. Keeping the same language on both ends is simple, and
-      let's you focus on learning server side skills instead of, say, Golang.
-      Finally, MongoDb might be a bit of an odd choice, but it goes along with
-      the theme of keeping things simple. We won't have to worry about normal
-      forms, composite keys, and complex relationships between tables. We'll
-      have to be more careful with the data, but it's a great choice for
-      prototyping and quick iterations.
+      For this project the stack we'll be using is Angular for the front end,
+      express for the server side, and MongoDb for storage. Of course, you can
+      swap out any of these elements if you're more familiar with something
+      else. You can find all the code for this project can be found
+      <a href="https://github.com/zacharydscott/flasher">here</a>.
     </p>
-	<p>One last note: I'm going to assume that you have Node and NPM set up and ready to go, and have either a Unix style shell, or understand how to translate the commands into the arcane incantations needed to use a Windows machine.</p>
+    <p>
+      So, why this stack? Let's start and move our way back. Angular is always a
+      great choice for a larger app with more than a few pages and needs the
+      option to scale. Of course React would be a great choice to. So would
+      Svelte, Vue, or even SolidJs - go check that one out - would be a great
+      choice. It all comes down to what you're familiar with here.
+    </p>
+    <p>
+      Moving to the back end, Express is an easy choice for getting into full
+      stack development. Keeping the same language across the stack keeps things
+      consistent, and let's you focus on learning server side skills instead of,
+      say, Golang. Plus it has a huge community, meaning that you'll never have
+      to reinvent the wheel.
+    </p>
+    <p>
+      Finally on to the storage, MongoDb might be a bit of an odd choice, but it
+      goes along with the theme of keeping things simple. We won't have to worry
+      about normal forms, composite keys, and complex relationships between
+      tables. There's a document with JSON objects. Simple. We'll have to be
+      more careful with the data, but it's a great choice for prototyping and
+      quick iterations.
+    </p>
+    <p>
+      One last note: I'm going to assume that you have Node and NPM set up and
+      ready to go, and have either a Unix style shell, or understand how to
+      translate the commands into the arcane incantations needed to use a
+      Windows machine.
+    </p>
     <p>
       Now, besides the tech stack, there are other system level decisions that
       have to be made (shocking I know). How will we handle authentication. How
-      will we manage state on the front end? How about the back end? Well we'll mostly cross those bridges as we come to them, but the short answer here is JWTs, Angular services, and there won't be one, respectively. It's easy to see how these choices naturally affect each other. By going with JWTs we can don't even have to manage user sessions, and managing authentication state gets shifted onto the client. This lets us think of our server as a set of utilities that only manages changes between the database and clients. If leaving user authentication state to the client sounds dangerous, don't worry. We'll get into how JWTs work and why they're not, and why they're such a popular choice for apps that need to (at least be able to) scale.
+      will we manage state on the front end? How about the back end? Well we'll
+      mostly cross those bridges as we come to them, but the short answer here
+      is JWTs, Angular services, and there won't be one, respectively. It's easy
+      to see how these choices naturally affect each other. By going with JWTs
+      we can don't even have to manage user sessions, and managing
+      authentication state gets shifted onto the client. This lets us think of
+      our server as a set of utilities that only manages changes between the
+      database and clients. If leaving user authentication state to the client
+      sounds dangerous, don't worry. We'll get into how JWTs work and why
+      they're not, and why they're such a popular choice for apps that need to
+      (at least be able to) scale.
     </p>
     <p>
-      Ok, enough pretense, let's get started. Let's make a new git project and create the angular project as a subdirectory. If you don't have Angular installed make sure to to run <code>npm i -g @angular/cli</code> beforehand.
+      Ok, enough pretense, let's get started. Let's make a new git project and
+      create the angular project as a subdirectory. If you don't have Angular
+      installed make sure to to run
+      <code>npm i -g @angular/cli</code> beforehand.
     </p>
-	<pre><code># replace with your local projects directory
+    <pre><code># replace with your local projects directory
 cd ~/projects
 mkdir flasher
 cd flasher
