@@ -1,7 +1,6 @@
 .toolbar {
 	width: 100%;
 	box-shadow: 0 0 8px rgba(0,0,0,.8);
-	padding: .5rem 1rem;
     background: #fafaf5;
 	position: sticky;
 	transition: 500ms ease-in-out;
@@ -10,6 +9,7 @@
 		top: 0;
 	}
 	h2 {
+		padding: .5rem;
 		cursor: pointer;
 		font-family: Merriweather, serif;
 		font-weight: 100;
