@@ -20,6 +20,7 @@
     "@angular/router": "~12.2.0",
     "postprocessing": "^6.26.0",
     "rxjs": "~6.6.0",
+    "socket.io-client": "^4.7.1",
     "three": "^0.138.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -17,6 +17,7 @@
 	--neon-pink: #ff00c8;
 	--neon-orange: #ff8c00;
 	--neon-blue: #008aff;
+  --link: #403EFF;
 	&::-webkit-scrollbar {
 		display: none;
 	}
@@ -103,7 +104,7 @@ body {
 		font-family: Roboto;
 		white-space: pre-wrap;
 		background: #ebebe7;
-		padding: 1rem; 
+		padding: 1rem;
 		border-radius: .3rem;
 		code {
 		}

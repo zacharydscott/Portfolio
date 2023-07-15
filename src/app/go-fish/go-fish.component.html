@@ -1,0 +1,11 @@
+<section class="main-container">
+  <h2>Go Fish</h2>
+  <div *ngIf="!inRoom">
+    <label for="username">Username<input [(ngModel)]="username" type="text" id="room-id"></label>
+    <label for="room-id">Enter Room ID: <input [(ngModel)]="roomID" type="text" id="room-id"></label>
+    <button (click)="joinRoom()">Join Room</button>
+  </div>
+  <div *ngIf="inRoom">
+    <div *ngFor="let player of players" class="card">{{player.username}}</div>
+  </div>
+</section>
